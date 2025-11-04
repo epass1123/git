@@ -1,4 +1,4 @@
-# 깃허브 + 윈도우 + Visual Studio(C) 기초 실습 가이드
+# 깃허브 기초 실습 가이드
 
 > **목표**  
 > 로컬에 Git 설치 → 초대받은 GitHub 저장소 클론 → Visual Studio에서 C 예제 빌드/실행 → 변경사항 `add/commit/push` → 브랜치 생성 → Pull Request(PR) 생성까지 한 번에 경험합니다.
