@@ -38,8 +38,7 @@
 
 ## 2) 저장소 클론(복제) 받기
 
-> 강사가 안내한 저장소 주소: `https://github.com/<ORG>/<REPO>.git`  
-> (여기서 `<ORG>`/`<REPO>`는 강사가 알려준 실제 경로로 대체)
+> 저장소 주소: `https://github.com/epass1123/git.git`  
 
 ```powershell
 # 작업할 폴더로 이동(예: D:\work)
@@ -59,27 +58,6 @@ git pull origin main
 
 ---
 
-## 3) Visual Studio에서 C 예제 빌드/실행
-
-> 이 저장소에는 `vs/HelloC` 예제가 포함되어 있습니다. (없다면 아래 **3-2) 수동 생성** 절차로 만들어도 됩니다.)
-
-### 3-1) 포함된 솔루션 열기(권장)
-1. `.s\HelloC\HelloC.sln` 더블클릭 또는 Visual Studio에서 **열기 → 프로젝트/솔루션**, 해당 `.sln` 선택
-2. 상단 **솔루션 구성**: `Debug | x64` 선택(기본값)
-3. **빌드 → 솔루션 빌드(Ctrl+Shift+B)** 실행
-4. **디버그 → 디버깅 없이 시작(Ctrl+F5)** 로 실행
-
-> 실행 결과 콘솔에 `Hello, Git & C!`가 보이면 성공.
-
-### 3-2) (대안) 빈 프로젝트로 직접 만들기
-1. Visual Studio 실행 → **새 프로젝트 만들기**
-2. 템플릿: **Empty Project**(C++) 선택 → 이름: `HelloC` → 위치: 저장소 폴더 내부 `vs\HelloC`
-3. **프로젝트에 새 항목 추가** → **C++ 파일(.cpp)** 선택 후 이름을 `main.c`로 저장
-4. `메뉴 → 프로젝트 → 속성`  
-   - **구성**: `모든 구성` / **플랫폼**: `모든 플랫폼`  
-   - **C/C++ → 언어 → C 언어 표준**: `ISO C11` 또는 가능하면 `C17` 선택  
-5. `main.c`에 아래 코드 붙여넣기 → 빌드/실행
-
 ```c
 #include <stdio.h>
 
@@ -91,7 +69,7 @@ int main(void) {
 
 ---
 
-## 4) 첫 수정 → add/commit/push
+## 3) 첫 수정 → add/commit/push
 
 1. 코드 수정 (예: 출력 문구 변경)
    ```c
@@ -110,7 +88,7 @@ int main(void) {
 
 ---
 
-## 5) 브랜치 생성 후 작업하기
+## 4) 브랜치 생성 후 작업하기
 
 1. 브랜치 생성 & 이동
    ```powershell
@@ -131,7 +109,7 @@ int main(void) {
 
 ---
 
-## 6) GitHub에서 Pull Request(PR) 만들기
+## 5) GitHub에서 Pull Request(PR) 만들기
 
 1. GitHub 저장소 페이지 접속 → 상단에 **“Compare & pull request”** 클릭  
 2. PR 제목/설명 작성(변경 내용, 의도 간단히)
@@ -142,7 +120,7 @@ int main(void) {
 
 ---
 
-## 7) 동기화(pull)와 브랜치 정리
+## 6) 동기화(pull)와 브랜치 정리
 
 ```powershell
 git checkout main
@@ -152,7 +130,7 @@ git branch -d feature/hello-name
 
 ---
 
-## 8) 명령어 요약(치트시트)
+## 7) 명령어 요약(치트시트)
 
 ```powershell
 # 최초 1회
@@ -180,7 +158,7 @@ git branch -d feature/hello-name
 
 ---
 
-## 9) 자주 겪는 이슈 해결
+## 8) 자주 겪는 이슈 해결
 
 - **권한 에러(403/권한 없음)**  
   → 저장소 **초대 수락** 여부 확인. 강사에게 Collaborator 권한 요청.
@@ -196,7 +174,7 @@ git branch -d feature/hello-name
 
 ---
 
-## 10) 실습 미션(제출 기준)
+## 9) 실습 미션(제출 기준)
 
 - [ ] `feature/hello-name` 브랜치 생성
 - [ ] `main.c`에 본인 이름과 오늘 날짜를 출력하는 한 줄 추가
